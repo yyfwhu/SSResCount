@@ -82,8 +82,8 @@ def main():
                 residue_down_limit = 0
                 residue_up_limit   = residue_count
             else:
-                residue_down_limit = int(input("Use Residue From (Index starts from 1): ")) - 1
-                residue_up_limit   = int(input("Use Residue To   (Index starts from 1): "))
+                residue_up_limit     = residue_count - int(input("Use Residue From (Index starts from 1): ")) + 1
+                residue_down_limit   = residue_count - int(input("Use Residue To   (Index starts from 1): "))
 
             # Read Through Lines and Count Secondary Structure
 
@@ -103,6 +103,7 @@ def main():
             for time in range(time_count):
                 # print("residue: " + str(residue))
                 # print(lines[residue])
+                 print(translines[time+1][residue_down_limit:residue_up_limit])
                  count_coil[time]      = translines[time+1][residue_down_limit:residue_up_limit].count('~')
                  count_b_sheet[time]   = translines[time+1][residue_down_limit:residue_up_limit].count('E')
                  count_b_bridge[time]  = translines[time+1][residue_down_limit:residue_up_limit].count('B')

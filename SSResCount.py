@@ -103,15 +103,15 @@ def main():
             for time in range(time_count):
                 # print("residue: " + str(residue))
                 # print(lines[residue])
-                 print(translines[time+1][residue_down_limit:residue_up_limit])
-                 count_coil[time]      = translines[time+1][residue_down_limit:residue_up_limit].count('~')
-                 count_b_sheet[time]   = translines[time+1][residue_down_limit:residue_up_limit].count('E')
-                 count_b_bridge[time]  = translines[time+1][residue_down_limit:residue_up_limit].count('B')
-                 count_bend[time]      = translines[time+1][residue_down_limit:residue_up_limit].count('S')
-                 count_turn[time]      = translines[time+1][residue_down_limit:residue_up_limit].count('T')
-                 count_a_helix[time]   = translines[time+1][residue_down_limit:residue_up_limit].count('H')
-                 count_3_helix[time]   = translines[time+1][residue_down_limit:residue_up_limit].count('I')
-                 count_5_helix[time]   = translines[time+1][residue_down_limit:residue_up_limit].count('G')
+                # print(translines[time+1][residue_down_limit:residue_up_limit])
+                count_coil[time]      = translines[time+1][residue_down_limit:residue_up_limit].count('~')
+                count_b_sheet[time]   = translines[time+1][residue_down_limit:residue_up_limit].count('E')
+                count_b_bridge[time]  = translines[time+1][residue_down_limit:residue_up_limit].count('B')
+                count_bend[time]      = translines[time+1][residue_down_limit:residue_up_limit].count('S')
+                count_turn[time]      = translines[time+1][residue_down_limit:residue_up_limit].count('T')
+                count_a_helix[time]   = translines[time+1][residue_down_limit:residue_up_limit].count('H')
+                count_3_helix[time]   = translines[time+1][residue_down_limit:residue_up_limit].count('I')
+                count_5_helix[time]   = translines[time+1][residue_down_limit:residue_up_limit].count('G')
             # Output to File
 
             try:
